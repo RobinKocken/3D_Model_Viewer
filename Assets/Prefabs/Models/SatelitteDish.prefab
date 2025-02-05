@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2351121209002677287}
+  - component: {fileID: 1910067867139399573}
   - component: {fileID: 9010248621657628406}
   - component: {fileID: 3008336216575439909}
   m_Layer: 0
@@ -33,6 +34,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910067867139399573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190059293932386130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79364e7d3bed34fbaa7ed8ff00f529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelData: {fileID: 0}
+  materialsHolders:
+  - meshRenderer: {fileID: 3008336216575439909}
+    litMaterial: {fileID: 2100000, guid: e2a12fd7b9a717b4abb6fd70d22f7399, type: 2}
+    baseMaterial: {fileID: 2100000, guid: 3792d32912e1cb04ea9674710a5e42db, type: 2}
+    normalMaterial: {fileID: 2100000, guid: b4b84e77cbf697c4bb886d5a00c24c71, type: 2}
+    maskMaterial: {fileID: 2100000, guid: 7b7504f0483527542b1cd26a42daf541, type: 2}
 --- !u!33 &9010248621657628406
 MeshFilter:
   m_ObjectHideFlags: 0

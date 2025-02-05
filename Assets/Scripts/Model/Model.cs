@@ -6,7 +6,6 @@ public class Model : MonoBehaviour
     [Header("Data")]
     [SerializeField] private ModelData modelData;
 
-    [SerializeField] private MaterialType materialType;
     [SerializeField] private List<MaterialHolder> materialsHolders;
 
     public void SwitchMaterials(MaterialType materialType)
