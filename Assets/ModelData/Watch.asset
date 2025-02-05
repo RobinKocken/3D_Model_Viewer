@@ -15,4 +15,5 @@ MonoBehaviour:
   modelName: Wrist Watch
   description: 
   artist: Marnix Evers
-  model: {fileID: 3416762497405370915, guid: 4ab41790196a0ce43b506708a59c708a, type: 3}
+  modelPrefab: {fileID: 3416762497405370915, guid: 4ab41790196a0ce43b506708a59c708a,
+    type: 3}

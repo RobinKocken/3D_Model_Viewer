@@ -4,9 +4,7 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Input input;
-
-    [SerializeField] private Transform target;
+    private Transform target;
 
     [Header("Move")]
     [SerializeField] private float moveSpeed;
@@ -23,27 +21,36 @@ public class CameraController : MonoBehaviour
     private Vector2 cameraRotation;
     private Vector3 targetOffset;
 
-
     private bool canMove;
     private bool canRotate;
 
-    private Vector2 mouseMove;
-    private Vector2 mouseZoom;
+    public Vector2 mouseMove;
+    public Vector2 mouseZoom;
 
     private Vector3 TargetPos
     {
         get
         {
-            return target.position + targetOffset;
+            if(target == null)
+            {
+                return Vector3.zero + targetOffset;
+            }
+            else
+            {
+                return target.position + targetOffset;
+            }
         }
     }
 
     private void Start()
     {
-        input = new Input();
-        input.ModelView.Enable();
+        ModelManager.Instance.OnModelSpawned += SetModel;
 
-        InitializeInput();
+        GameManager.Instance.Input.ModelView.Pan.performed += (InputAction.CallbackContext context) => canMove = true;
+        GameManager.Instance.Input.ModelView.Rotate.performed += (InputAction.CallbackContext context) => canRotate = true;
+
+        GameManager.Instance.Input.ModelView.Pan.canceled += (InputAction.CallbackContext context) => canMove = false;
+        GameManager.Instance.Input.ModelView.Rotate.canceled += (InputAction.CallbackContext context) => canRotate = false;
     }
 
     private void Update()
@@ -52,25 +59,25 @@ public class CameraController : MonoBehaviour
         Camera();
     }
 
-    private void InitializeInput()
+    private void OnDestroy()
     {
-        input.ModelView.Pan.performed += (InputAction.CallbackContext context) => canMove = true;
-        input.ModelView.Rotate.performed += (InputAction.CallbackContext context) => canRotate = true;
+        ModelManager.Instance.OnModelSpawned -= SetModel;
 
-        input.ModelView.Pan.canceled += (InputAction.CallbackContext context) => canMove = false;
-        input.ModelView.Rotate.canceled += (InputAction.CallbackContext context) => canRotate = false;
+        GameManager.Instance.Input.ModelView.Pan.performed -= (InputAction.CallbackContext context) => canMove = true;
+        GameManager.Instance.Input.ModelView.Rotate.performed -= (InputAction.CallbackContext context) => canRotate = true;
+
+        GameManager.Instance.Input.ModelView.Pan.canceled -= (InputAction.CallbackContext context) => canMove = false;
+        GameManager.Instance.Input.ModelView.Rotate.canceled -= (InputAction.CallbackContext context) => canRotate = false;
     }
 
     private void UpdateInput()
     {
-        mouseMove = input.ModelView.MousePos.ReadValue<Vector2>();
-        mouseZoom = input.ModelView.Zoom.ReadValue<Vector2>();
+        mouseMove = GameManager.Instance.Input.ModelView.MousePos.ReadValue<Vector2>();
+        mouseZoom = GameManager.Instance.Input.ModelView.Zoom.ReadValue<Vector2>();
     }
 
     private void Camera()
     {
-        if(target == null) return;
-
         zoomDistance += Mathf.Clamp(mouseZoom.y, -zoomAmount, zoomAmount);
         cameraRotation += new Vector2(-mouseMove.y, mouseMove.x) * mouseSensMultiplier * Convert.ToInt32(canRotate);
 
@@ -81,5 +88,16 @@ public class CameraController : MonoBehaviour
 
         //transform.rotation = Quaternion.Slerp(transform.rotation, newTargetRot, rotationSpeed * Time.deltaTime);
         //transform.position = Vector3.Slerp(transform.position, newTargetPos, moveSpeed * Time.deltaTime);
+    }
+
+    public void ResetOffset()
+    {
+        targetOffset = Vector3.zero;
+    }
+
+    public void SetModel(ModelData modelData, GameObject model)
+    {
+        target = model.transform;
+        ResetOffset();
     }
 }

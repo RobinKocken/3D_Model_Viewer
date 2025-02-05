@@ -7,10 +7,10 @@ public class ModelData : ScriptableObject
     [TextArea(4, 0)]
     [SerializeField] private string description;
     [SerializeField] private string artist;
-    [SerializeField] private GameObject model;
+    [SerializeField] private GameObject modelPrefab;
 
     public string ModelName => modelName;
     public string Description => description;
     public string Artist => artist;
-    public GameObject Model => model;
+    public GameObject ModelPrefab => modelPrefab;
 }

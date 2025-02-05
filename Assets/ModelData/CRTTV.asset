@@ -15,4 +15,5 @@ MonoBehaviour:
   modelName: CRTTV
   description: 
   artist: Melih Karakoc
-  model: {fileID: 2524862527562080670, guid: a3ca3e7e2bc9031489c2d35b7239a51b, type: 3}
+  modelPrefab: {fileID: 2524862527562080670, guid: a3ca3e7e2bc9031489c2d35b7239a51b,
+    type: 3}
