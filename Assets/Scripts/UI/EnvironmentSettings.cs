@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class EnvironmentSettings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //[Header("Skybox")]
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -1,13 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ModelSelectManager : MonoBehaviour
 {
     [SerializeField] private List<ModelData> modelDatas;
 
+    [Header("UI")]
     [SerializeField] private GameObject modelSelectPrefab;
     [SerializeField] private RectTransform content;
+    [SerializeField] private HorizontalLayoutGroup horizontalLayout;
+    [SerializeField] private RectMask2D rectMask;
 
     private void Start()
     {
@@ -22,7 +25,7 @@ public class ModelSelectManager : MonoBehaviour
 
             if(select.TryGetComponent<ModelSelect>(out ModelSelect modelSelect))
             {
-                modelSelect.SetModelSelect(modelDatas[i]);
+                modelSelect.SetModelSelect(modelDatas[i], rectMask, horizontalLayout);
             }
         }
     }

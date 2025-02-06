@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour
     [Header("Zoom")]
     [SerializeField] private float zoomDistance;
     [SerializeField] private float zoomAmount;
+    [SerializeField] private Vector2 maxZoom;
 
     private Vector2 cameraRotation;
     private Vector3 targetOffset;
@@ -24,8 +25,8 @@ public class CameraController : MonoBehaviour
     private bool canMove;
     private bool canRotate;
 
-    public Vector2 mouseMove;
-    public Vector2 mouseZoom;
+    private Vector2 mouseMove;
+    private Vector2 mouseZoom;
 
     private Vector3 TargetPos
     {
@@ -79,6 +80,10 @@ public class CameraController : MonoBehaviour
     private void Camera()
     {
         zoomDistance += Mathf.Clamp(mouseZoom.y, -zoomAmount, zoomAmount);
+
+        if(zoomDistance > maxZoom.x) zoomDistance = maxZoom.x;
+        else if(zoomDistance < maxZoom.y) zoomDistance = maxZoom.y;
+
         cameraRotation += new Vector2(-mouseMove.y, mouseMove.x) * mouseSensMultiplier * Convert.ToInt32(canRotate);
 
         targetOffset += (-mouseMove.x * transform.right + -mouseMove.y * transform.up) * mouseMoveMultiplier * Convert.ToInt32(canMove);

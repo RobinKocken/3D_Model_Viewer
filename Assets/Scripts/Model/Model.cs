@@ -42,7 +42,7 @@ public class Model : MonoBehaviour
         }
     }
 
-    public void ApplyMaterial(Material material)
+    public void ApplyShader(Material shader)
     {
 
     }
