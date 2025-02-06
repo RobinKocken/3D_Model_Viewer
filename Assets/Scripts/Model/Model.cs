@@ -7,11 +7,14 @@ public class Model : MonoBehaviour
     [SerializeField] private ModelData modelData;
 
     [SerializeField] private List<MaterialHolder> materialsHolders;
+    public List<MaterialHolder> MaterialHolders => materialsHolders;
 
     public void SwitchMaterials(MaterialType materialType)
     {
         for(int i = 0; i < materialsHolders.Count; i++)
         {
+            if(materialsHolders[i].switchMaterial == false) continue;
+
             switch(materialType)
             {
                 case MaterialType.Lit:
@@ -52,6 +55,7 @@ public class Model : MonoBehaviour
     {
         public MeshRenderer meshRenderer;
 
+        public bool switchMaterial = true;
         public Material litMaterial;
         public Material baseMaterial;
         public Material normalMaterial;

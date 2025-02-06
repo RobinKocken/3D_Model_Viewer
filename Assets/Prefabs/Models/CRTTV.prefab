@@ -49,10 +49,17 @@ MonoBehaviour:
   modelData: {fileID: 11400000, guid: ba9010e189fe2104e863401a9e53f2e0, type: 2}
   materialsHolders:
   - meshRenderer: {fileID: 1048935336838429347}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 1396e4632ec61804da88ded1e7313643, type: 2}
     baseMaterial: {fileID: 2100000, guid: d6d9a07cff70aa541b936da7117de26a, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8f1eddd174f74ae4abf1bb66cd6bb675, type: 2}
     maskMaterial: {fileID: 2100000, guid: 464ed2caf6346184180a2dc2b31885a9, type: 2}
+  - meshRenderer: {fileID: 2140426988320049226}
+    switchMaterial: 0
+    litMaterial: {fileID: 0}
+    baseMaterial: {fileID: 0}
+    normalMaterial: {fileID: 0}
+    maskMaterial: {fileID: 0}
 --- !u!1 &6265859521758670817
 GameObject:
   m_ObjectHideFlags: 0
