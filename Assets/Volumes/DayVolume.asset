@@ -35,11 +35,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 19872.26
   updateMode:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   updatePeriod:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 7.46
   includeSunInBaking:
     m_OverrideState: 0
     m_Value: 0

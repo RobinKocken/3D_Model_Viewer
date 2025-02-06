@@ -10,16 +10,18 @@ public class SkyboxSelect : UIButton
 
     private void Start()
     {
-        OnEnvironmentSelect += EnvironmentManager.Instance.SelectEnvironment;
+        OnEnvironmentSelect += EnvironmentManager.Instance.SelectSkybox;
     }
 
     private void OnDestroy()
     {
-        OnEnvironmentSelect -= EnvironmentManager.Instance.SelectEnvironment;
+        OnEnvironmentSelect -= EnvironmentManager.Instance.SelectSkybox;
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         OnEnvironmentSelect?.Invoke(skyboxType);
     }
+
+
 }

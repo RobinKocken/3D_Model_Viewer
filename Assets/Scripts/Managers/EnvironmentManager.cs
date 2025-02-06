@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 
 public class EnvironmentManager : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class EnvironmentManager : MonoBehaviour
     [SerializeField] private VolumeProfile dayProfile;
     [SerializeField] private VolumeProfile nightProfile;
 
+    public Action OnSkyboxChange;
 
     private void Awake()
     {
@@ -18,22 +21,49 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
-    public void SelectEnvironment(SkyboxType environmentType)
+    private void Start()
+    {
+        SelectSkybox(SkyboxType.Day);
+    }
+
+    public void SelectSkybox(SkyboxType environmentType)
     {
         switch(environmentType)
         {
             case SkyboxType.Day:
             {
-                volume.sharedProfile = dayProfile;
+                volume.profile = dayProfile;
+
+                if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
+                {
+                    sky.rotation.value = 0;
+                }
+
+                OnSkyboxChange?.Invoke();
 
                 break;
             }
             case SkyboxType.Night:
             {
-                volume.sharedProfile = nightProfile;
+                volume.profile = nightProfile;
+
+                if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
+                {
+                    sky.rotation.value = 0;
+                }
+
+                OnSkyboxChange?.Invoke();
 
                 break;
             }
+        }
+    }
+
+    public void SetSkyboxRotation(float rotation)
+    {
+        if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
+        {
+            sky.rotation.value = rotation;
         }
     }
 }

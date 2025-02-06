@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelData: {fileID: 11400000, guid: ba9010e189fe2104e863401a9e53f2e0, type: 2}
-  materialType: 0
   materialsHolders:
   - meshRenderer: {fileID: 1048935336838429347}
     litMaterial: {fileID: 2100000, guid: 1396e4632ec61804da88ded1e7313643, type: 2}
@@ -66,7 +65,7 @@ GameObject:
   - component: {fileID: 852481792985053840}
   - component: {fileID: 2140426988320049226}
   m_Layer: 0
-  m_Name: Cube.001
+  m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 8054d43192f05864bba4be2f8563da2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
