@@ -23,7 +23,6 @@ public class ModelSettings : MonoBehaviour
         modelName.text = modelData.ModelName;
         artistName.text = $"by {modelData.Artist}";
 
-        float vertCount = 0;
         float triCount = 0;
 
         if(model.TryGetComponent<Model>(out Model component))

@@ -24,7 +24,7 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Start()
     {
-        SelectSkybox(EnvironmentType.Day);
+        SelectSkybox(EnvironmentType.Normal);
     }
 
     public void SelectSkybox(EnvironmentType environmentType)

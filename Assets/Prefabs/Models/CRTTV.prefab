@@ -54,7 +54,7 @@ MonoBehaviour:
     baseMaterial: {fileID: 2100000, guid: d6d9a07cff70aa541b936da7117de26a, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8f1eddd174f74ae4abf1bb66cd6bb675, type: 2}
     maskMaterial: {fileID: 2100000, guid: 464ed2caf6346184180a2dc2b31885a9, type: 2}
-  - meshRenderer: {fileID: 0}
+  - meshRenderer: {fileID: 3201699373528296040}
     switchMaterial: 0
     litMaterial: {fileID: 0}
     baseMaterial: {fileID: 0}
