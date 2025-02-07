@@ -658,7 +658,7 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!1001 &1139130315
+--- !u!1001 &1065941832
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -669,17 +669,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3f4c45ef476b15c4e98d2c5a051f9bcd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.41124
+      value: -20.692135
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f4c45ef476b15c4e98d2c5a051f9bcd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -89.67803
+      value: -93.28534
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f4c45ef476b15c4e98d2c5a051f9bcd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -984.22864
+      value: -984.20197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f4c45ef476b15c4e98d2c5a051f9bcd,
         type: 3}
@@ -739,4 +739,4 @@ SceneRoots:
   - {fileID: 225627298}
   - {fileID: 459653517}
   - {fileID: 393064077}
-  - {fileID: 1139130315}
+  - {fileID: 1065941832}
