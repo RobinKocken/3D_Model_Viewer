@@ -61,6 +61,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
+    - _Metallicity: 0.95
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -69,6 +70,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _Resolution: 7
+    - _Smoothness: 0.85
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -90,15 +92,17 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _WaveStrength: 4.3
+    - _WaveAmount: 20
+    - _WaveStrength: 0.77
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - _metalicity: 0.98
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _WaveColor: {r: 0, g: 0.42968747, b: 1, a: 1}
+    - _WaveColor: {r: 0, g: 0.10784316, b: 0.25, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2481629563397377527
 MonoBehaviour:
