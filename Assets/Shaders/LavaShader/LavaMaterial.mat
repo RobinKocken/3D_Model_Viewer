@@ -87,7 +87,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _Exposure_Weight: 0
     - _Float: -1.6
-    - _Intensity: 18.74
+    - _Intensity: 41.1
     - _Normalspeed: 5.75
     - _OpaqueCullMode: 2
     - _RayTracing: 0
@@ -98,7 +98,7 @@ Material:
     - _RequireSplitLighting: 0
     - _Scale: 258.4
     - _Scale_1: 21.55
-    - _Smoothness: 0.28
+    - _Smoothness: 0.6
     - _Speed: 0.004
     - _SrcBlend: 1
     - _StencilRef: 0
