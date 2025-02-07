@@ -132,7 +132,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2189125934140328113}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -213,15 +213,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelData: {fileID: 11400000, guid: e1ebe945bd9bef84ba944a0f427ff692, type: 2}
-  materialType: 0
   materialsHolders:
   - meshRenderer: {fileID: 6269667206116448120}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 761bd75977196a447b094c5aae7aaf83, type: 2}
     baseMaterial: {fileID: 2100000, guid: 02c612c12a2a9fb419ea3690c32a33b2, type: 2}
     normalMaterial: {fileID: 2100000, guid: 0b45ddffac68f514fa2feafae088e61c, type: 2}
     maskMaterial: {fileID: 2100000, guid: a254f3f1511ccf2449a39985970b6c7e, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: 11b727fad5d03f74fb182e51628a5a99, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
   - meshRenderer: {fileID: 6391495759924350395}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 8a638b27613e0d144a0faa88d7737e23, type: 2}
     baseMaterial: {fileID: 2100000, guid: 4939eba3c9cc58e458cdf1a9be8353c8, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8864eb3c7d6cfef4d84afa8d7b5d4184, type: 2}
     maskMaterial: {fileID: 2100000, guid: 4ac4826c6c095e544b3ae74e45524a57, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: 4939eba3c9cc58e458cdf1a9be8353c8, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}

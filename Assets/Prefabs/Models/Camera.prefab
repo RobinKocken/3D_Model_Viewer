@@ -48,23 +48,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelData: {fileID: 0}
-  materialType: 0
   materialsHolders:
   - meshRenderer: {fileID: 7517900515735312917}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 48b79877cd8414e4781a25de4eca30e0, type: 2}
     baseMaterial: {fileID: 2100000, guid: 8ed2b7c638782d0439b3b2a9df7df725, type: 2}
     normalMaterial: {fileID: 2100000, guid: 9ae9e365508a3754482adb38c9c8a7cb, type: 2}
     maskMaterial: {fileID: 2100000, guid: bf3acc13c4dff4f4f8299c0eddb7e4ea, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: ce1080a91b5e27b42b7d5ffb788213d1, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
   - meshRenderer: {fileID: 6639837368692384006}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 8cc14543e8ac08d4ca83b2fbf6edbe11, type: 2}
     baseMaterial: {fileID: 2100000, guid: 4740aac5f2035c64580452bef7b60779, type: 2}
     normalMaterial: {fileID: 2100000, guid: d0cd9b83674d38946994ac02d00d8cf8, type: 2}
     maskMaterial: {fileID: 2100000, guid: f22eeefae0d036942a136b7fb67932bd, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: 61a97051c37e5da4898806465f617482, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
   - meshRenderer: {fileID: 8016958806574657820}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 943fea9646b33f74da0aa7d7566bd306, type: 2}
     baseMaterial: {fileID: 2100000, guid: 0c5b89b37f0651e45ad1349b811e5f2e, type: 2}
     normalMaterial: {fileID: 2100000, guid: b84444b39d0e1aa48b3781eb4a791436, type: 2}
     maskMaterial: {fileID: 2100000, guid: bb7237dd553862243808f8fb5ecae74c, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: 392e72720de2fff4a94d6ca815a82b96, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
 --- !u!1 &4535713707726110837
 GameObject:
   m_ObjectHideFlags: 0

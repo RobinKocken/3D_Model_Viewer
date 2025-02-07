@@ -41,13 +41,44 @@ public class Model : MonoBehaviour
 
                     break;
                 }
+                case MaterialType.Uv:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].uvShader;
+
+                    break;
+                }
+                case MaterialType.Holo:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].holoShader;
+
+                    break;
+                }
+                case MaterialType.Toon:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].toonShader;
+
+                    break;
+                }
+                case MaterialType.Hex:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].hexShader;
+
+                    break;
+                }
+                case MaterialType.Lava:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].lavaShader;
+
+                    break;
+                }
+                case MaterialType.Pixel:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].pixelShader;
+
+                    break;
+                }
             }
         }
-    }
-
-    public void ApplyShader(Material shader)
-    {
-
     }
 
     [System.Serializable]
@@ -60,6 +91,13 @@ public class Model : MonoBehaviour
         public Material baseMaterial;
         public Material normalMaterial;
         public Material maskMaterial;
+        [Space]
+        public Material uvShader;
+        public Material holoShader;
+        public Material toonShader;
+        public Material hexShader;
+        public Material lavaShader;
+        public Material pixelShader;
     }
 }
 
@@ -69,4 +107,10 @@ public enum MaterialType
     Base,
     Normal,
     Mask,
+    Uv,
+    Holo,
+    Toon,
+    Hex,
+    Lava,
+    Pixel,
 }

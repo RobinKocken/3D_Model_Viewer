@@ -49,10 +49,17 @@ MonoBehaviour:
   modelData: {fileID: 0}
   materialsHolders:
   - meshRenderer: {fileID: 3008336216575439909}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: e2a12fd7b9a717b4abb6fd70d22f7399, type: 2}
     baseMaterial: {fileID: 2100000, guid: 3792d32912e1cb04ea9674710a5e42db, type: 2}
     normalMaterial: {fileID: 2100000, guid: b4b84e77cbf697c4bb886d5a00c24c71, type: 2}
     maskMaterial: {fileID: 2100000, guid: 7b7504f0483527542b1cd26a42daf541, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: c4bc1e32355517d47b3157b42bc66559, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
 --- !u!33 &9010248621657628406
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -54,12 +54,24 @@ MonoBehaviour:
     baseMaterial: {fileID: 2100000, guid: d6d9a07cff70aa541b936da7117de26a, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8f1eddd174f74ae4abf1bb66cd6bb675, type: 2}
     maskMaterial: {fileID: 2100000, guid: 464ed2caf6346184180a2dc2b31885a9, type: 2}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 2100000, guid: 4490fbbff2c672b4783bed65abedfc9a, type: 2}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
+    pixelShader: {fileID: 0}
   - meshRenderer: {fileID: 3201699373528296040}
     switchMaterial: 0
     litMaterial: {fileID: 0}
     baseMaterial: {fileID: 0}
     normalMaterial: {fileID: 0}
     maskMaterial: {fileID: 0}
+    uvShader: {fileID: 0}
+    holoShader: {fileID: 0}
+    toonShader: {fileID: 0}
+    hexShader: {fileID: 0}
+    lavaShader: {fileID: 0}
+    pixelShader: {fileID: 0}
 --- !u!1 &4539819475761350761
 GameObject:
   m_ObjectHideFlags: 0
