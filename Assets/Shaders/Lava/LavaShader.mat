@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LavaMaterial
+  m_Name: LavaShader
   m_Shader: {fileID: -6465566751694194690, guid: a123c8a5e22dc6b49a7cae130c39ec33,
     type: 3}
   m_Parent: {fileID: 0}
@@ -62,11 +62,12 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
+    - _Emissionintensity: 33
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _Exposure_Weight: 0
-    - _Intensity: 21.82
+    - _LavaGlowScale: 100
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -74,10 +75,8 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Scale: 90.79
-    - _ScaleStones: 0.4
-    - _Smoothness: 0.87
-    - _Speed: 0.01
+    - _ScaleStones: 0.25
+    - _Smoothness: 0.85
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -107,8 +106,9 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Lava_Color: {r: 0.9433962, g: 0.5578085, b: 0.11569937, a: 0}
+    - _Vector2: {r: 4.33, g: 2.44, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8648438748059911773
+--- !u!114 &979279848895534575
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
