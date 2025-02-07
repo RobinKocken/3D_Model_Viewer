@@ -213,14 +213,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelData: {fileID: 11400000, guid: e1ebe945bd9bef84ba944a0f427ff692, type: 2}
-  materialType: 0
   materialsHolders:
   - meshRenderer: {fileID: 6269667206116448120}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 761bd75977196a447b094c5aae7aaf83, type: 2}
     baseMaterial: {fileID: 2100000, guid: 02c612c12a2a9fb419ea3690c32a33b2, type: 2}
     normalMaterial: {fileID: 2100000, guid: 0b45ddffac68f514fa2feafae088e61c, type: 2}
     maskMaterial: {fileID: 2100000, guid: a254f3f1511ccf2449a39985970b6c7e, type: 2}
   - meshRenderer: {fileID: 6391495759924350395}
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 8a638b27613e0d144a0faa88d7737e23, type: 2}
     baseMaterial: {fileID: 2100000, guid: 4939eba3c9cc58e458cdf1a9be8353c8, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8864eb3c7d6cfef4d84afa8d7b5d4184, type: 2}
