@@ -664,6 +664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf649cad74cc524b80893e12453afc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 506204798}
+  buttonImage: {fileID: 260236640}
   materialType: 2
 --- !u!1 &264444884
 GameObject:
@@ -754,6 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf649cad74cc524b80893e12453afc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 506204798}
+  buttonImage: {fileID: 264444887}
   materialType: 1
 --- !u!1 &323238030
 GameObject:
@@ -1225,6 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506204797}
+  - component: {fileID: 506204798}
   m_Layer: 5
   m_Name: ModelMaterials
   m_TagString: Untagged
@@ -1252,6 +1257,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -207.5}
   m_SizeDelta: {x: 225, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &506204798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506204796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e49a7410c639ea45913a1293bff6bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  hoverColor: {r: 0.5245282, g: 0.2286151, b: 0.2286151, a: 1}
 --- !u!1 &624678698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,7 +1495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d7dca465f3b76469b3fb59df0b66f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxType: 0
+  uIManager: {fileID: 1887944636}
+  buttonImage: {fileID: 739146246}
+  skyboxType: 1
 --- !u!1 &759705092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1686,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1ebe945bd9bef84ba944a0f427ff692, type: 2}
   - {fileID: 11400000, guid: c00514a6d82f12d459d25e251472351c, type: 2}
   - {fileID: 11400000, guid: 7eb6db01ac5d7a0479b9913e0a5fdd63, type: 2}
+  - {fileID: 11400000, guid: cb2dbb40b7537054193a3d35f8338bae, type: 2}
   modelSelectPrefab: {fileID: 8566301342865107701, guid: 8ef1121b42fe41d4aa91e8a3bcb9cb64,
     type: 3}
   content: {fileID: 1496581593}
@@ -1791,8 +1814,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 432432460}
-  dayProfile: {fileID: 11400000, guid: b076ea6dac8a2c442bf7161f6cb73c4d, type: 2}
-  nightProfile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
+  sun: {fileID: 1417675944}
+  environmentHolders:
+  - environmentType: 1
+    profile: {fileID: 11400000, guid: b076ea6dac8a2c442bf7161f6cb73c4d, type: 2}
+    temperature: 5000
+    intensity: 14000
+  - environmentType: 2
+    profile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
+    temperature: 7000
+    intensity: 3000
 --- !u!114 &908280553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2314,6 +2345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf649cad74cc524b80893e12453afc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 506204798}
+  buttonImage: {fileID: 1107019888}
   materialType: 0
 --- !u!1 &1286332194
 GameObject:
@@ -2538,6 +2571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf649cad74cc524b80893e12453afc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 506204798}
+  buttonImage: {fileID: 1296288155}
   materialType: 3
 --- !u!1 &1329649923
 GameObject:
@@ -2800,7 +2835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 100000
+  m_Intensity: 5000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -2922,7 +2957,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 100000
+  m_Intensity: 5000
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2963,9 +2998,9 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 6000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 479537.5}
   m_UseBoundingSphereOverride: 0
@@ -3179,6 +3214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb734c22facd10489317066145f6342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 0}
+  buttonImage: {fileID: 0}
 --- !u!1 &1621955234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4225,6 +4262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887944634}
+  - component: {fileID: 1887944636}
   - component: {fileID: 1887944635}
   m_Layer: 5
   m_Name: EnvironmentSettings
@@ -4267,7 +4305,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f84695b0200220459df3f604d19b4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxRotationSlider: {fileID: 1578627383}
+  sunRotationSlider: {fileID: 0}
+--- !u!114 &1887944636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887944633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e49a7410c639ea45913a1293bff6bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  selectedColor: {r: 1, g: 0, b: 0, a: 1}
+  hoverColor: {r: 0.5245282, g: 0.2286151, b: 0.2286151, a: 1}
 --- !u!1 &2000005367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,7 +4410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d7dca465f3b76469b3fb59df0b66f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxType: 1
+  uIManager: {fileID: 1887944636}
+  buttonImage: {fileID: 2000005369}
+  skyboxType: 2
 --- !u!1 &2011191626
 GameObject:
   m_ObjectHideFlags: 0

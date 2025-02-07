@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eed8724239fee248a42e96df5db96f2, type: 3}
   m_Name: Satellite
   m_EditorClassIdentifier: 
-  modelName: CRTTV
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.
+  modelName: Satellite
+  description: "A large dish antenna used for receiving television or communication
+    signals, usually mounted on buildings. One texture set (2048x2048). Most of the
+    fine details, such as bolts, bevels are baked into the normal map to keep polygon
+    count low.\r"
   artist: Melih Karakoc
-  modelPrefab: {fileID: 2524862527562080670, guid: a3ca3e7e2bc9031489c2d35b7239a51b,
+  modelPrefab: {fileID: 190059293932386130, guid: 8a9ae74f0f366ac4faae964c95e43e31,
     type: 3}

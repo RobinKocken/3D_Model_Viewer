@@ -4,24 +4,28 @@ using UnityEngine.EventSystems;
 
 public class SkyboxSelect : UIButton
 {
-    [SerializeField] SkyboxType skyboxType;
+    [SerializeField] EnvironmentType skyboxType;
 
-    public Action<SkyboxType> OnEnvironmentSelect;
+    public Action<EnvironmentType> OnEnvironmentSelect;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         OnEnvironmentSelect += EnvironmentManager.Instance.SelectSkybox;
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
+
         OnEnvironmentSelect -= EnvironmentManager.Instance.SelectSkybox;
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
+        base.OnPointerUp(eventData);
+
         OnEnvironmentSelect?.Invoke(skyboxType);
     }
-
-
 }

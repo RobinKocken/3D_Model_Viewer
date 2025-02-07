@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
@@ -8,10 +9,10 @@ public class EnvironmentManager : MonoBehaviour
     public static EnvironmentManager Instance;
 
     [SerializeField] private Volume volume;
-    [SerializeField] private VolumeProfile dayProfile;
-    [SerializeField] private VolumeProfile nightProfile;
+    //[SerializeField] private Light sun;
+    [SerializeField] private HDAdditionalLightData sun;
 
-    public Action OnSkyboxChange;
+    [SerializeField] private List<EnvironmentHolder> environmentHolders;
 
     private void Awake()
     {
@@ -23,53 +24,41 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Start()
     {
-        SelectSkybox(SkyboxType.Day);
+        SelectSkybox(EnvironmentType.Day);
     }
 
-    public void SelectSkybox(SkyboxType environmentType)
+    public void SelectSkybox(EnvironmentType environmentType)
     {
-        switch(environmentType)
+        for(int i = 0; i < environmentHolders.Count; i++)
         {
-            case SkyboxType.Day:
-            {
-                volume.profile = dayProfile;
+            if(environmentHolders[i].environmentType != environmentType) continue;
 
-                if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
-                {
-                    sky.rotation.value = 0;
-                }
+            volume.profile = environmentHolders[i].profile;
+            sun.GetComponent<Light>().colorTemperature = environmentHolders[i].temperature;
+            sun.intensity = environmentHolders[i].intensity;
 
-                OnSkyboxChange?.Invoke();
-
-                break;
-            }
-            case SkyboxType.Night:
-            {
-                volume.profile = nightProfile;
-
-                if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
-                {
-                    sky.rotation.value = 0;
-                }
-
-                OnSkyboxChange?.Invoke();
-
-                break;
-            }
+            return;
         }
     }
 
-    public void SetSkyboxRotation(float rotation)
+    public void SetSunRotation(float rotation)
     {
-        if(volume.profile.TryGet<HDRISky>(out HDRISky sky))
-        {
-            sky.rotation.value = rotation;
-        }
+        sun.transform.rotation = Quaternion.Euler(new Vector3(sun.transform.eulerAngles.x, rotation, sun.transform.eulerAngles.z));
+    }
+
+    [Serializable]
+    public class EnvironmentHolder
+    {
+        public EnvironmentType environmentType;
+        public VolumeProfile profile;
+        public float temperature;
+        public float intensity;
     }
 }
 
-public enum SkyboxType
+public enum EnvironmentType
 {
+    Normal,
     Day,
     Night,
 }

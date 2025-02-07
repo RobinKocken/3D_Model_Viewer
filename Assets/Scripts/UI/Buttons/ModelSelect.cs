@@ -54,8 +54,6 @@ public class ModelSelect : UIButton
     {
         base.OnPointerEnter(eventData);
 
-        Debug.Log("Pointer Enter");
-
         StopAllCoroutines();
         StartCoroutine(ModelSelectAnimation(descriptionSize));
     }

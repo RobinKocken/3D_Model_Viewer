@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Camera
   m_EditorClassIdentifier: 
   modelName: Camera
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.
+  description: The reference used was a Canon eos 250d dslr camera, however some
+    liberties have been taken to save time and resources. the camera has taken ~8
+    hours to make, including mesh and textures. 3 textures were made, each 2056x2056,
+    and the camera consists of 3 objects in total.
   artist: Luuk van de Kamp
   modelPrefab: {fileID: 813403054389766639, guid: d51eb64ad72542e40a29dde1ce13817b,
     type: 3}
