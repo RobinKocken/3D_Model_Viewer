@@ -2234,7 +2234,7 @@
     "m_Title": "Smoothness channel",
     "m_Position": {
         "x": 23.33349609375,
-        "y": 441.33343505859377
+        "y": 441.3333740234375
     }
 }
 
@@ -3236,7 +3236,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "EmissionIntensity",
     "m_DefaultReferenceName": "_EmissionIntensity",
-    "m_OverrideReferenceName": "_Emissionintensity",
+    "m_OverrideReferenceName": "_EmissionIntensity",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -4651,7 +4651,7 @@
     "m_Title": "Lava Shader",
     "m_Position": {
         "x": -2151.999755859375,
-        "y": -146.00003051757813
+        "y": -145.99998474121095
     }
 }
 
