@@ -16,7 +16,8 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public Action<UIButton> OnHover;
     public Action<UIButton> OnUnhover;
 
-    [SerializeField] private UnityEvent events;
+    public UnityEvent OnSelectEvents;
+    public UnityEvent OnDeselectEvents;        
 
     protected virtual void Start()
     {
@@ -55,7 +56,6 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public virtual void OnPointerUp(PointerEventData eventData)
     {
         OnSelect?.Invoke(this);
-        events?.Invoke();
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)

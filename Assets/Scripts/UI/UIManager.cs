@@ -12,10 +12,14 @@ public class UIManager : MonoBehaviour
     public void Select(UIButton uiButton)
     {
         if(button != null)
+        {
             button.ButtonImage.color = normalColor;
+            button.OnDeselectEvents?.Invoke();
+        }
 
         button = uiButton;
         button.ButtonImage.color = selectedColor;
+        button.OnSelectEvents?.Invoke();
     }
 
     public void Deselect(UIButton uiButton)
@@ -24,6 +28,7 @@ public class UIManager : MonoBehaviour
 
         button.ButtonImage.color = normalColor;
         button = null;
+        button.OnDeselectEvents?.Invoke();
     }
 
     public void Hover(UIButton uiButton)
