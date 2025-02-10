@@ -58,7 +58,7 @@ MonoBehaviour:
     uvShader: {fileID: 2100000, guid: cc3ab412064e6314bb7aff620e39fb84, type: 2}
     holoShader: {fileID: 2100000, guid: db20652628fefc7408d706e2a619f5cf, type: 2}
     toonShader: {fileID: 2100000, guid: c4bc1e32355517d47b3157b42bc66559, type: 2}
-    hexShader: {fileID: 0}
+    hexShader: {fileID: 2100000, guid: 03c2112b46adc7046b0d0e42ef5cd8f6, type: 2}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
     pixelShader: {fileID: 0}
 --- !u!33 &9010248621657628406
