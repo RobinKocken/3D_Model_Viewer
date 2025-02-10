@@ -18,6 +18,14 @@ public class UIManager : MonoBehaviour
         button.ButtonImage.color = selectedColor;
     }
 
+    public void Deselect(UIButton uiButton)
+    {
+        if(uiButton != button) return;
+
+        button.ButtonImage.color = normalColor;
+        button = null;
+    }
+
     public void Hover(UIButton uiButton)
     {
         if(uiButton == button) return;
@@ -30,10 +38,5 @@ public class UIManager : MonoBehaviour
         if(uiButton == button) return;
 
         uiButton.ButtonImage.color = normalColor;
-    }
-
-    public void ResetButton()
-    {
-
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -11,14 +12,18 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public Image ButtonImage => buttonImage;
 
     public Action<UIButton> OnSelect;
+    public Action<UIButton> OnDeselect;
     public Action<UIButton> OnHover;
     public Action<UIButton> OnUnhover;
+
+    [SerializeField] private UnityEvent events;
 
     protected virtual void Start()
     {
         if(uIManager != null)
         {
             OnSelect += uIManager.Select;
+            OnDeselect += uIManager.Deselect;
             OnHover += uIManager.Hover;
             OnUnhover += uIManager.Unhover;
 
@@ -31,6 +36,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         if(uIManager != null)
         {
             OnSelect -= uIManager.Select;
+            OnDeselect -= uIManager.Deselect;
             OnHover -= uIManager.Hover;
             OnUnhover -= uIManager.Unhover;
         }
@@ -49,6 +55,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public virtual void OnPointerUp(PointerEventData eventData)
     {
         OnSelect?.Invoke(this);
+        events?.Invoke();
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)
