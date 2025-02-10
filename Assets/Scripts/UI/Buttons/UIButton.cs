@@ -36,6 +36,11 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         }
     }
 
+    public void ResetUIButton()
+    {
+        OnSelect?.Invoke(this);
+    }
+
     public virtual void OnPointerDown(PointerEventData eventData)
     {
 

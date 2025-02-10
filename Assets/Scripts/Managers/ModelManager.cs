@@ -39,6 +39,8 @@ public class ModelManager : MonoBehaviour
 
     public void SwitchModelMaterial(MaterialType materialType)
     {
+        if(model == null) return;
+
         model.SwitchMaterials(materialType);
     }
 }

@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SkyboxSelect : UIButton
+public class EnvironmentSelect : UIButton
 {
-    [SerializeField] EnvironmentType skyboxType;
+    [SerializeField] EnvironmentType environmentType;
 
     public Action<EnvironmentType> OnEnvironmentSelect;
 
@@ -13,6 +13,9 @@ public class SkyboxSelect : UIButton
         base.Start();
 
         OnEnvironmentSelect += EnvironmentManager.Instance.SelectSkybox;
+
+        if(environmentType == EnvironmentType.Normal)
+            ResetUIButton();
     }
 
     protected override void OnDestroy()
@@ -26,6 +29,6 @@ public class SkyboxSelect : UIButton
     {
         base.OnPointerUp(eventData);
 
-        OnEnvironmentSelect?.Invoke(skyboxType);
+        OnEnvironmentSelect?.Invoke(environmentType);
     }
 }

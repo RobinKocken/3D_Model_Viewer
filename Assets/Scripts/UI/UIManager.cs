@@ -31,4 +31,9 @@ public class UIManager : MonoBehaviour
 
         uiButton.ButtonImage.color = normalColor;
     }
+
+    public void ResetButton()
+    {
+
+    }
 }

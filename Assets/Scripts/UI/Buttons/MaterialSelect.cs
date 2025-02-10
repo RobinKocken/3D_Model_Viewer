@@ -13,6 +13,9 @@ public class MaterialSelect : UIButton
         base.Start();
 
         OnMaterialSelect += ModelManager.Instance.SwitchModelMaterial;
+
+        if(materialType == MaterialType.Lit)
+            ModelManager.Instance.OnModelSpawned += (ModelData, GameObject) => ResetUIButton();
     }
 
     protected override void OnDestroy()
@@ -20,6 +23,7 @@ public class MaterialSelect : UIButton
         base.OnDestroy();
 
         OnMaterialSelect -= ModelManager.Instance.SwitchModelMaterial;
+        ModelManager.Instance.OnModelSpawned -= (ModelData, GameObject) => ResetUIButton();
     }
 
     public override void OnPointerUp(PointerEventData eventData)

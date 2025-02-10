@@ -63,11 +63,12 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _Emission: 1
+    - _EmissionStrength: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _OpaqueCullMode: 2
-    - _PixelScale: 130.8
+    - _PixelScale: 70
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
