@@ -27,8 +27,8 @@ public class UIManager : MonoBehaviour
         if(uiButton != button) return;
 
         button.ButtonImage.color = normalColor;
-        button = null;
         button.OnDeselectEvents?.Invoke();
+        button = null;
     }
 
     public void Hover(UIButton uiButton)

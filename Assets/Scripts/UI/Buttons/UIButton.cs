@@ -73,4 +73,9 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
         OnUnhover?.Invoke(this);
     }
+
+    public void RotateButtonZ(float rotateAmount)
+    {
+        transform.rotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z + rotateAmount);
+    }
 }

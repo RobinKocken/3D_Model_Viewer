@@ -13,20 +13,20 @@ public class SwitchGOButton : UIButton
 
         for(int i = 0; i < switchObjects.Count; i++)
         {
-            if(switchObjects[i].activeSelf)
+            if(switchObjects[i].activeSelf == true)
             {
                 switchObjects[i].SetActive(false);
 
                 int nextIndex = 1;
 
-                if(i + 1 < switchObjects.Count)
+                if(i + 1 >= switchObjects.Count)
                 {
-                    nextIndex = 0;
+                    nextIndex = -i;
                 }
 
                 switchObjects[i + nextIndex].SetActive(true);
 
-                continue;
+                return;
             }
         }
     }
