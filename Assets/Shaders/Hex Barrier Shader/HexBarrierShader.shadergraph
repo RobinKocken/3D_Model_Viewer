@@ -2920,7 +2920,7 @@
     "m_Title": "Noise effect",
     "m_Position": {
         "x": -2080.666748046875,
-        "y": -10.0
+        "y": -9.99993896484375
     }
 }
 
@@ -4500,8 +4500,8 @@
     "m_ObjectId": "a09bba09d04e4185b2b2c4caa9b662f6",
     "m_Title": "Hexagon shader",
     "m_Position": {
-        "x": -2406.0,
-        "y": 696.6666259765625
+        "x": -2405.999755859375,
+        "y": 696.6668090820313
     }
 }
 
@@ -4771,7 +4771,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Hexagon Scale",
     "m_DefaultReferenceName": "_Hexagon_Scale",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_HexScale",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -5208,7 +5208,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Color Change",
     "m_DefaultReferenceName": "_Color_Change",
-    "m_OverrideReferenceName": "_ColorChange",
+    "m_OverrideReferenceName": "_ColorSpec",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
