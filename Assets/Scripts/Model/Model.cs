@@ -41,6 +41,12 @@ public class Model : MonoBehaviour
 
                     break;
                 }
+                case MaterialType.Clay:
+                {
+                    materialsHolders[i].meshRenderer.material = materialsHolders[i].clayMaterial;
+
+                    break;
+                }
                 case MaterialType.Uv:
                 {
                     materialsHolders[i].meshRenderer.material = materialsHolders[i].uvShader;
@@ -91,6 +97,7 @@ public class Model : MonoBehaviour
         public Material baseMaterial;
         public Material normalMaterial;
         public Material maskMaterial;
+        public Material clayMaterial;
         [Space]
         public Material uvShader;
         public Material holoShader;
@@ -107,6 +114,7 @@ public enum MaterialType
     Base,
     Normal,
     Mask,
+    Clay,
     Uv,
     Holo,
     Toon,

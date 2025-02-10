@@ -41,18 +41,4 @@ public class ModelManager : MonoBehaviour
     {
         model.SwitchMaterials(materialType);
     }
-
-    public void SetModelMaterial(Material material = null)
-    {
-        if(model == null) return;
-
-        if(material == null)
-        {
-            
-
-            return;
-        }
-
-
-    }
 }

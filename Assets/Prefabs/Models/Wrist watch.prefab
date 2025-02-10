@@ -220,8 +220,9 @@ MonoBehaviour:
     baseMaterial: {fileID: 2100000, guid: 02c612c12a2a9fb419ea3690c32a33b2, type: 2}
     normalMaterial: {fileID: 2100000, guid: 0b45ddffac68f514fa2feafae088e61c, type: 2}
     maskMaterial: {fileID: 2100000, guid: a254f3f1511ccf2449a39985970b6c7e, type: 2}
-    uvShader: {fileID: 0}
-    holoShader: {fileID: 0}
+    clayMaterial: {fileID: 2100000, guid: 429fcb89e77bf804e9c9d8198a46d4e2, type: 2}
+    uvShader: {fileID: 2100000, guid: cc3ab412064e6314bb7aff620e39fb84, type: 2}
+    holoShader: {fileID: 2100000, guid: db20652628fefc7408d706e2a619f5cf, type: 2}
     toonShader: {fileID: 2100000, guid: 11b727fad5d03f74fb182e51628a5a99, type: 2}
     hexShader: {fileID: 0}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
@@ -232,8 +233,9 @@ MonoBehaviour:
     baseMaterial: {fileID: 2100000, guid: 4939eba3c9cc58e458cdf1a9be8353c8, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8864eb3c7d6cfef4d84afa8d7b5d4184, type: 2}
     maskMaterial: {fileID: 2100000, guid: 4ac4826c6c095e544b3ae74e45524a57, type: 2}
-    uvShader: {fileID: 0}
-    holoShader: {fileID: 0}
+    clayMaterial: {fileID: 2100000, guid: 429fcb89e77bf804e9c9d8198a46d4e2, type: 2}
+    uvShader: {fileID: 2100000, guid: cc3ab412064e6314bb7aff620e39fb84, type: 2}
+    holoShader: {fileID: 2100000, guid: db20652628fefc7408d706e2a619f5cf, type: 2}
     toonShader: {fileID: 2100000, guid: 4939eba3c9cc58e458cdf1a9be8353c8, type: 2}
     hexShader: {fileID: 0}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}

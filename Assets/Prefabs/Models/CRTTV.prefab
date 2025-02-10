@@ -54,8 +54,9 @@ MonoBehaviour:
     baseMaterial: {fileID: 2100000, guid: d6d9a07cff70aa541b936da7117de26a, type: 2}
     normalMaterial: {fileID: 2100000, guid: 8f1eddd174f74ae4abf1bb66cd6bb675, type: 2}
     maskMaterial: {fileID: 2100000, guid: 464ed2caf6346184180a2dc2b31885a9, type: 2}
-    uvShader: {fileID: 0}
-    holoShader: {fileID: 0}
+    clayMaterial: {fileID: 2100000, guid: 429fcb89e77bf804e9c9d8198a46d4e2, type: 2}
+    uvShader: {fileID: 2100000, guid: cc3ab412064e6314bb7aff620e39fb84, type: 2}
+    holoShader: {fileID: 2100000, guid: db20652628fefc7408d706e2a619f5cf, type: 2}
     toonShader: {fileID: 2100000, guid: 4490fbbff2c672b4783bed65abedfc9a, type: 2}
     hexShader: {fileID: 0}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
@@ -66,6 +67,7 @@ MonoBehaviour:
     baseMaterial: {fileID: 0}
     normalMaterial: {fileID: 0}
     maskMaterial: {fileID: 0}
+    clayMaterial: {fileID: 0}
     uvShader: {fileID: 0}
     holoShader: {fileID: 0}
     toonShader: {fileID: 0}
