@@ -30,23 +30,53 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
+    RenderType: Transparent
   disabledShaderPasses:
-  - TransparentDepthPrepass
+  - MOTIONVECTORS
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
-  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _NormalFromTexture_12fd9d24b8304b2a867afae0ae29aaed_Texture_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 81a9eb4b48a8bf944843aea1ad2035e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_29950173d1c74915b14422a461f7ba84_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 04f2cea9cddf1184c8253acac1b69ba4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_39c6513155ea439c954a8dd20ceddf6f_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 9ad67624e509c9a4a8a9ec766b9ce2ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_b5e4cac2f7ec446ba23c1f9b392ebfd7_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1792ed9db834d5a4ca2b9f77fa7cc0a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_c4cc283c34f2492fa6c8b9fcd643feb7_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 9ad67624e509c9a4a8a9ec766b9ce2ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_dcaee027f8f04717ac440bc7316b39ec_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bc362f0234e9a6f4cbe56907f31a304a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_ec70062e0e10481a8f6c0c100f29ab2b_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 04f2cea9cddf1184c8253acac1b69ba4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,9 +93,11 @@ Material:
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
-    - _AlphaDstBlend: 0
+    - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
+    - _ColorChange: 0.5
+    - _Color_Change: 0.431
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
@@ -73,42 +105,59 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
-    - _DstBlend: 0
+    - _DstBlend: 10
+    - _Emission_Intensity: 44
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
+    - _Fresnel_Power: 5.15
+    - _Fresnel_Strength: 4.72
+    - _Fresnel_power: 0
+    - _HexagonBorder_Strength: 3.04
+    - _Hexagon_Scale: 5.4
+    - _Line_Speed: 0.18
+    - _Line_Strength: 0.04
+    - _Lines_speed: -0.1
+    - _Noise_Speed: 0.3
+    - _Noise_Strength: 4.42
+    - _Noise_scale: 2.26
+    - _Normal_Scale: 2.44
+    - _Normal_strength: 0.074
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _RenderQueueType: 1
+    - _RenderQueueType: 4
     - _RequireSplitLighting: 0
+    - _Scale: 3.17
+    - _Scale_1: 0
     - _SrcBlend: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 8
+    - _StencilRefDepth: 0
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 10
-    - _StencilRefMV: 40
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 9
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 15
     - _StencilWriteMaskMV: 41
+    - _Strength_lines: -0.1
     - _SupportDecals: 1
-    - _SurfaceType: 0
+    - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
-    - _TransparentDepthPrepassEnable: 0
+    - _TransparentDepthPrepassEnable: 1
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 3
+    - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
