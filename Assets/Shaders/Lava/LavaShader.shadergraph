@@ -3236,7 +3236,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "EmissionIntensity",
     "m_DefaultReferenceName": "_EmissionIntensity",
-    "m_OverrideReferenceName": "_EmissionIntensityy",
+    "m_OverrideReferenceName": "_EmissionIntensity",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -4650,7 +4650,7 @@
     "m_ObjectId": "c1f25becd618492a93392841184ea11a",
     "m_Title": "Lava Shader",
     "m_Position": {
-        "x": -2151.999755859375,
+        "x": -2152.0,
         "y": -145.99998474121095
     }
 }
