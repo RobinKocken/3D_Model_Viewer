@@ -110,15 +110,11 @@ public class ModelSelect : UIButton
 
             if(rectMask.rectTransform.rect.Contains(rectMask.rectTransform.InverseTransformPoint(cornerPos[0])) == false && bigSize.gameObject.activeSelf == true)
             {
-                Debug.Log("Left");
-
                 scrollRect.horizontalNormalizedPosition = Mathf.Lerp(scrollRect.horizontalNormalizedPosition, 0, Time.deltaTime * 6);
             }
 
             if(rectMask.rectTransform.rect.Contains(rectMask.rectTransform.InverseTransformPoint(cornerPos[3])) == false && bigSize.gameObject.activeSelf == true)
             {
-                Debug.Log("Right");
-
                 scrollRect.horizontalNormalizedPosition = Mathf.Lerp(scrollRect.horizontalNormalizedPosition, 1, Time.deltaTime * 6);
             }
 

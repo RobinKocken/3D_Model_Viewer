@@ -26,6 +26,8 @@ public class ModelManager : MonoBehaviour
 
     public void SelectModel(ModelData modelData)
     {
+        if(this.modelData == modelData) return;
+
         this.modelData = modelData;
 
         StartCoroutine(ModelDisolve(model != null));
