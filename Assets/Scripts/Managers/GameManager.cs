@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,5 +18,16 @@ public class GameManager : MonoBehaviour
 
         input = new Input();
         input.ModelView.Enable();
+        input.Keybinds.Enable();
+    }
+
+    private void Start()
+    {
+        input.Keybinds.Escape.performed += (InputAction.CallbackContext context) => Application.Quit();
+    }
+
+    private void OnDestroy()
+    {
+        input.Keybinds.Escape.performed -= (InputAction.CallbackContext context) => Application.Quit();
     }
 }

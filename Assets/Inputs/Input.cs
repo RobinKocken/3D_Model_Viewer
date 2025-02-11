@@ -138,6 +138,34 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Keybinds"",
+            ""id"": ""d964b21c-37d6-4436-86ea-8ab51d031277"",
+            ""actions"": [
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""74791c99-a996-4cd1-8dea-34fd02ed3497"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3abe1ff0-7df1-48c7-aad2-6d9909c07008"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -151,12 +179,16 @@ public partial class @Input: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_LeftMouse = m_UI.FindAction("LeftMouse", throwIfNotFound: true);
+        // Keybinds
+        m_Keybinds = asset.FindActionMap("Keybinds", throwIfNotFound: true);
+        m_Keybinds_Escape = m_Keybinds.FindAction("Escape", throwIfNotFound: true);
     }
 
     ~@Input()
     {
         UnityEngine.Debug.Assert(!m_ModelView.enabled, "This will cause a leak and performance issues, Input.ModelView.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, Input.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Keybinds.enabled, "This will cause a leak and performance issues, Input.Keybinds.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -330,6 +362,52 @@ public partial class @Input: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Keybinds
+    private readonly InputActionMap m_Keybinds;
+    private List<IKeybindsActions> m_KeybindsActionsCallbackInterfaces = new List<IKeybindsActions>();
+    private readonly InputAction m_Keybinds_Escape;
+    public struct KeybindsActions
+    {
+        private @Input m_Wrapper;
+        public KeybindsActions(@Input wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Escape => m_Wrapper.m_Keybinds_Escape;
+        public InputActionMap Get() { return m_Wrapper.m_Keybinds; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(KeybindsActions set) { return set.Get(); }
+        public void AddCallbacks(IKeybindsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_KeybindsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_KeybindsActionsCallbackInterfaces.Add(instance);
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
+        }
+
+        private void UnregisterCallbacks(IKeybindsActions instance)
+        {
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
+        }
+
+        public void RemoveCallbacks(IKeybindsActions instance)
+        {
+            if (m_Wrapper.m_KeybindsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IKeybindsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_KeybindsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_KeybindsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public KeybindsActions @Keybinds => new KeybindsActions(this);
     public interface IModelViewActions
     {
         void OnZoom(InputAction.CallbackContext context);
@@ -340,5 +418,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnLeftMouse(InputAction.CallbackContext context);
+    }
+    public interface IKeybindsActions
+    {
+        void OnEscape(InputAction.CallbackContext context);
     }
 }
