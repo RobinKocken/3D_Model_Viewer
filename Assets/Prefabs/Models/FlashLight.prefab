@@ -49,7 +49,7 @@ MonoBehaviour:
   modelData: {fileID: 0}
   materialsHolders:
   - meshRenderer: {fileID: 7397419821296050378}
-    switchMaterial: 0
+    switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 667a97d9baf64744296ed0560b450801, type: 2}
     baseMaterial: {fileID: 2100000, guid: 4314a0a733ce061448b1b41d8f73dc6f, type: 2}
     normalMaterial: {fileID: 2100000, guid: f6933ddea1bfbdf4da28d257ad86f3c9, type: 2}

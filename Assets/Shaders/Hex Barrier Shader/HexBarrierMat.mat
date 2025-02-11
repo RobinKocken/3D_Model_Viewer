@@ -97,7 +97,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
     - _ColorChange: 0.5
-    - _ColorSpec: 0.64895654
+    - _ColorSpec: 0.001
     - _Color_Change: 0.431
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
@@ -114,7 +114,7 @@ Material:
     - _Fresnel_Power: 5.15
     - _Fresnel_Strength: 4.72
     - _Fresnel_power: 0
-    - _HexScale: 6.685213
+    - _HexScale: 4
     - _HexagonBorder_Strength: 3.04
     - _Hexagon_Scale: 4.3
     - _Line_Speed: 0.18

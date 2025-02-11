@@ -71,8 +71,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.76000005}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2812435738509586684
 CanvasRenderer:
@@ -206,7 +206,7 @@ RectTransform:
   m_AnchorMin: {x: 0.010000001, y: 0.016666668}
   m_AnchorMax: {x: 0.99166673, y: 0.76000005}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &858910240269337665
 CanvasRenderer:
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
-  buttonImage: {fileID: 0}
+  buttonImage: {fileID: 3197125480738827879}
   OnSelectEvents:
     m_PersistentCalls:
       m_Calls: []
@@ -544,10 +544,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   modelData: {fileID: 0}
-  rect: {fileID: 236638523578425116}
+  rectTransform: {fileID: 236638523578425116}
   smallSize: {fileID: 7519230394897239502}
   bigSize: {fileID: 347329707945285017}
   modelName: {fileID: 5310273890621297808}
+  modelDescriptionName: {fileID: 6478178138451513417}
   description: {fileID: 8509946866941646267}
   sizeSpeed: 10
   originalSize: {x: 250, y: 50}

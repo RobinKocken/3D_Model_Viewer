@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class CameraController : MonoBehaviour
     [Header("Rotation")]
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float mouseSensMultiplier;
+    [SerializeField] private float maxRot;
 
     [Header("Zoom")]
     [SerializeField] private float zoomDistance;
@@ -80,19 +82,15 @@ public class CameraController : MonoBehaviour
     private void Camera()
     {
         zoomDistance += Mathf.Clamp(mouseZoom.y, -zoomAmount, zoomAmount);
-
-        if(zoomDistance > maxZoom.x) zoomDistance = maxZoom.x;
-        else if(zoomDistance < maxZoom.y) zoomDistance = maxZoom.y;
+        zoomDistance = Mathf.Clamp(zoomDistance, maxZoom.x, maxZoom.y);
 
         cameraRotation += new Vector2(-mouseMove.y, mouseMove.x) * mouseSensMultiplier * Convert.ToInt32(canRotate);
+        cameraRotation.x = Mathf.Clamp(cameraRotation.x, -maxRot, maxRot);
 
         targetOffset += (-mouseMove.x * transform.right + -mouseMove.y * transform.up) * mouseMoveMultiplier * Convert.ToInt32(canMove);
 
-        transform.rotation = Quaternion.Euler(cameraRotation.x, cameraRotation.y, 0);
-        transform.position = TargetPos + transform.forward * zoomDistance;
-
-        //transform.rotation = Quaternion.Slerp(transform.rotation, newTargetRot, rotationSpeed * Time.deltaTime);
-        //transform.position = Vector3.Slerp(transform.position, newTargetPos, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(cameraRotation.x, cameraRotation.y + 180, 0);
+        transform.position = TargetPos + transform.forward * -zoomDistance;
     }
 
     public void ResetOffset()
