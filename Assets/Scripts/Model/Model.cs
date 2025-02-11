@@ -105,6 +105,8 @@ public class Model : MonoBehaviour
         public Material hexShader;
         public Material lavaShader;
         public Material pixelShader;
+        [Space]
+        public Material disolveShader;
     }
 }
 

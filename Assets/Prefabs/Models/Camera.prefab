@@ -62,6 +62,7 @@ MonoBehaviour:
     hexShader: {fileID: 2100000, guid: 03c2112b46adc7046b0d0e42ef5cd8f6, type: 2}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
     pixelShader: {fileID: 2100000, guid: 3519f7a57a4d40642baf25fd09277eb5, type: 2}
+    disolveShader: {fileID: 2100000, guid: 53408c47ccff9674e8a6daf7c3fccc75, type: 2}
   - meshRenderer: {fileID: 6639837368692384006}
     switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 8cc14543e8ac08d4ca83b2fbf6edbe11, type: 2}
@@ -75,6 +76,7 @@ MonoBehaviour:
     hexShader: {fileID: 2100000, guid: 03c2112b46adc7046b0d0e42ef5cd8f6, type: 2}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
     pixelShader: {fileID: 2100000, guid: 2ee6b450d6f9fa8419214d5163e69cb9, type: 2}
+    disolveShader: {fileID: 2100000, guid: c7f94f09c11f051499d149d01390f5ee, type: 2}
   - meshRenderer: {fileID: 8016958806574657820}
     switchMaterial: 1
     litMaterial: {fileID: 2100000, guid: 943fea9646b33f74da0aa7d7566bd306, type: 2}
@@ -88,6 +90,7 @@ MonoBehaviour:
     hexShader: {fileID: 2100000, guid: 03c2112b46adc7046b0d0e42ef5cd8f6, type: 2}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
     pixelShader: {fileID: 2100000, guid: aa00f7fdba6de65469eb05368dcc5d79, type: 2}
+    disolveShader: {fileID: 2100000, guid: 143f75c396a89c648a5ef36b37f409a8, type: 2}
 --- !u!1 &4535713707726110837
 GameObject:
   m_ObjectHideFlags: 0

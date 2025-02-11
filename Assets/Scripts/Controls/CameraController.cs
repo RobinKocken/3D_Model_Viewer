@@ -81,7 +81,7 @@ public class CameraController : MonoBehaviour
 
     private void Camera()
     {
-        zoomDistance += Mathf.Clamp(mouseZoom.y, -zoomAmount, zoomAmount);
+        zoomDistance -= Mathf.Clamp(mouseZoom.y, -zoomAmount, zoomAmount);
         zoomDistance = Mathf.Clamp(zoomDistance, maxZoom.x, maxZoom.y);
 
         cameraRotation += new Vector2(-mouseMove.y, mouseMove.x) * mouseSensMultiplier * Convert.ToInt32(canRotate);

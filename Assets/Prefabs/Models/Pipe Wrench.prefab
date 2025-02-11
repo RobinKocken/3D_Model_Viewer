@@ -61,6 +61,7 @@ MonoBehaviour:
     hexShader: {fileID: 2100000, guid: 03c2112b46adc7046b0d0e42ef5cd8f6, type: 2}
     lavaShader: {fileID: 2100000, guid: 5388bb1f0ae1bcc4faf3d532afa580ee, type: 2}
     pixelShader: {fileID: 2100000, guid: 643631b131a203d41ab11935509584d1, type: 2}
+    disolveShader: {fileID: 2100000, guid: 93c118af6c01be14692755854cec19bd, type: 2}
 --- !u!33 &4748418636345792337
 MeshFilter:
   m_ObjectHideFlags: 0
